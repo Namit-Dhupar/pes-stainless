@@ -1,5 +1,62 @@
 [
     {
+        "ProductType": "Paul Cooperation",   
+        "Subtype": [
+            {
+                "id": 29,
+                "ItemName": "Paul Filter Housing",
+                "ItemImageA": "/Images/Row%20A/paulproduct1.jpg",
+                "ItemImageB": null,            
+                "ItemFile": "/Products/About%20Pall%20Corporation_F&B.pdf",
+                "ItemDescription": "About Pall Corporatiion Pall Corporation (NYSE:PLL) is a filtration, separation and purification leader using Total Fluid Management SM solutions to meet the critical needs of customers in biopharmaceutical, hospital and transfusion medicine, energy, food & beverage, electronics, municipal and industrial water, aerospace, transportation and broad industrial markets",
+                "ItemPurpose": ["Diary", "Brewery", "Distillary", "Beverage"], 
+                "SelectedPurpose" : "",
+                "ItemFlowRate": ["1", "2", "5", "10", "Other(Mention Below)"],  
+                "SelectedFlowRate" : "",
+                "ItemMicron": ["1", "2", "3", "4", "5", "10", "20", "Other(Mention Below)"],
+                "SelectedMicron": "",
+                "ItemMessage": "",
+                "isEnquired": false
+            },
+            {
+                "id": 30,
+                "ItemName": "Paul Filter Cartridges",
+                "ItemImageA": "/Images/Row%20A/paulproduct2.jpg",
+                "ItemImageB": null,            
+                "ItemFile": "/Products/About%20Pall%20Corporation_F&B.pdf",
+                "ItemDescription": "About Pall Corporatiion Pall Corporation (NYSE:PLL) is a filtration, separation and purification leader using Total Fluid Management SM solutions to meet the critical needs of customers in biopharmaceutical, hospital and transfusion medicine, energy, food & beverage, electronics, municipal and industrial water, aerospace, transportation and broad industrial markets",
+                "ItemPurpose": ["Diary", "Brewery", "Distillary", "Beverage"], 
+                "SelectedPurpose" : "",
+                "ItemCartridges": ["XLD", "PFT", "CLR", "NXT", "Other(Mention Below)"],
+                "SelectedCartridges": "",
+                "ItemMicron": ["1", "2", "3", "4", "5", "10", "20", "Other(Mention Below)"],
+                "SelectedMicron": "",
+                "ItemOpenEnd": ["Single Open Ended", "Double Open Ended"],
+                "SelectedOpenEnd": "",
+                "ItemMessage": "", 
+                "isEnquired": false             
+            },
+            {
+                "id": 31,
+                "ItemName": "Paul Filter Sheets",
+                "ItemImageA": "/Images/Row%20A/paulproduct3.jpg",
+                "ItemImageB": null,            
+                "ItemFile": "/Products/About%20Pall%20Corporation_F&B.pdf",
+                "ItemDescription": "About Pall Corporatiion Pall Corporation (NYSE:PLL) is a filtration, separation and purification leader using Total Fluid Management SM solutions to meet the critical needs of customers in biopharmaceutical, hospital and transfusion medicine, energy, food & beverage, electronics, municipal and industrial water, aerospace, transportation and broad industrial markets",
+                "ItemPurpose": ["Diary", "Brewery", "Distillary", "Beverage"], 
+                "SelectedPurpose" : "",
+                "ItemSheetType": ["AKS(Carbon Sheet)", "K-Series Sheet", "Other(Mention Below)"],  
+                "SelectedSheetType" : "",
+                "ItemSheetSize": ["370", "470", "Custom Size"],
+                "SelectedSheetSize": "",
+                "ItemSheetIH": ["38", "40", "45", "Other(Mention Below)"],
+                "SelectedIH": "",
+                "ItemMessage": "", 
+                "isEnquired": false             
+            }
+        ]
+       },
+    {
      "ProductType": "Pumps",   
      "Subtype": [
          {

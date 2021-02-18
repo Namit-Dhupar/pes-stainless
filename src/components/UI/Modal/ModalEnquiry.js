@@ -100,13 +100,19 @@ const useStyles = makeStyles((theme) => ({
             <p style={{marginLeft: '24px'}}><strong><span style={{color: '#ec1f1f'}}>SIZE(MM):</span> {pes.SelectedSize}</strong></p>
             : pes.SelectedFlowRate ?
             <p style={{marginLeft: '24px'}}><strong><span style={{color: '#ec1f1f'}}>FLOW RATE(KL):</span> {pes.SelectedFlowRate}</strong></p>
-            : null
+            : pes.SelectedCartridges ?
+            <p style={{marginLeft: '24px'}}><strong><span style={{color: '#ec1f1f'}}>CARTRIDGE TYPE:</span> {pes.SelectedCartridges}</strong></p>
+            :
+            null
             }
             </Grid>
             <Grid item xs={4}>
             { pes.SelectedMOC ?  
             <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>MOC:</span> {pes.SelectedMOC}</strong></p>
-            : null}
+            : pes.SelectedMicron ?  
+            <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>MICRON:</span> {pes.SelectedMicron}</strong></p>
+            :
+            null}
             </Grid>
             <Grid item xs={4}>
             { pes.SelectedFitting ?  
@@ -115,6 +121,23 @@ const useStyles = makeStyles((theme) => ({
              <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>UNION TYPE:</span> {pes.SelectedUnion}</strong></p>
             : pes.SelectedPurpose ?  
             <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>APPLICATION:</span> {pes.SelectedPurpose}</strong></p>
+            : null}
+            </Grid>
+            <Grid item xs={4}>
+            { pes.SelectedOpenEnd ?  
+            <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>OPEN END TYPE:</span> {pes.SelectedOpenEnd}</strong></p>
+            : pes.SelectedSheetType ?  
+             <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>SHEET TYPE:</span> {pes.SelectedSheetType}</strong></p>
+            : null}
+            </Grid>
+            <Grid item xs={4}>
+            { pes.SelectedSheetSize ?  
+            <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>SHEET SIZE(mm):</span> {pes.SelectedSheetSize}</strong></p>
+            : null}
+            </Grid>
+            <Grid item xs={4}>
+            { pes.SelectedIH ?  
+            <p style={{marginLeft: '12px'}}><strong><span style={{color: '#ec1f1f'}}>INNER HOLE DIE(mm):</span> {pes.SelectedIH}</strong></p>
             : null}
             </Grid>
             <Grid item xs={12}>

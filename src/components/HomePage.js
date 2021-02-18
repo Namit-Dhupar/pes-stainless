@@ -13,12 +13,12 @@ const HomePage = () => {
             <h1>About Us</h1>
             <h3>PES STAINLESS EQUIPMENTS PRIVATE LIMITED</h3>
               <p></p>
-              <p><strong>Pes Stainless Equipment Pvt. Ltd.</strong> is involved in <strong>Service Provider, Manufacturer, Wholesaler, Distributor and Supplier</strong> their product business of
+              <p><strong>Pes Stainless Equipment Pvt. Ltd.</strong> is involved in <strong>Service Provider, Wholesaler, Distributor and Supplier</strong> their product business of
                <strong>Valves , Other, Pumps Pumping Equipment , Ball Valves and Heat Exchangers</strong> and related products for more than 10 years . Our Organization, established in 2011, Which 
                 is a Well-known name in our business category. The Organization listed its broad range of products on Make In India Trade</p>
                 </Grid>
                 <Grid item lg={6} xs={12}>   
-                <img className="AboutImage" src="/Images/home.jpg" alt="Pump Sample" />
+                 <img style={{float: "right"}} className="AboutImage" src="/Images/home.jpg" alt="Pump Sample" />
                 </Grid>
                 </Grid>
                 <br />

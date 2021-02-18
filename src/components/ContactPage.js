@@ -99,8 +99,8 @@ const ContactPage = () => {
 
   function sendMail() {
     window.Email.send({
-      SecureToken : "c5da93bc-d89c-455d-83f7-ca42e4c24efa",
-      To : 'info@pesgroup.co.in',
+      SecureToken : "7cefebf0-a240-4073-be0d-76d23f010624",
+      To : 'sales@pesstainless.com',
       From : `${Email}`,
       Subject : `New Enquiry from ${firstName} ${lastName} from website`,
       Body : `<html>

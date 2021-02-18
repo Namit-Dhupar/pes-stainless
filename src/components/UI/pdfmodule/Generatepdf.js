@@ -52,10 +52,14 @@ const Generatepdf = (props) => {
         {pes.SelectedHP ?
         <span><b>HP/kW: </b>{pes.SelectedHP}</span>
        : pes.SelectedSize ?<span><b>SIZE: </b>{pes.SelectedSize}</span> 
-       : pes.SelectedFlowRate ? <span><b>FLOW RATE(KL): </b>{pes.SelectedFlowRate}</span> : null}
+       : pes.SelectedFlowRate ? <span><b>FLOW RATE(KL): </b>{pes.SelectedFlowRate}</span>
+       : pes.SelectedCartridges ? <span><b>CARTRIDGE TYPE: </b>{pes.SelectedCartridges}</span> : null}
         <br/>
        {pes.SelectedMOC ?
-        <span><b>MOC: </b>{pes.SelectedMOC}</span>: null}
+        <span><b>MOC: </b>{pes.SelectedMOC}</span>:
+        pes.SelectedMicron ?
+        <span><b>MICRON: </b>{pes.SelectedMicron}</span>:
+        null}
         <br/>
         {pes.SelectedFitting ?
         <span><b>FITTING TYPE: </b>{pes.SelectedFitting}</span>
@@ -64,6 +68,20 @@ const Generatepdf = (props) => {
         pes.SelectedPurpose ?
         <span><b>APPLICATION: </b>{pes.SelectedPurpose}</span>
         : null}
+        <br/>
+        {pes.SelectedOpenEnd ?
+        <span><b>OPEN END TYPE: </b>{pes.SelectedOpenEnd}</span>:
+        pes.SelectedSheetType ?
+        <span><b>SHEET TYPE: </b>{pes.SelectedSheetType}</span>:
+        null}
+        <br/>
+        {pes.SelectedSheetSize ?
+        <span><b>SHEET SIZE(mm): </b>{pes.SelectedSheetSize}</span>:
+        null}
+        <br/>
+        {pes.SelectedIH ?
+        <span><b>INNER HOLE DIE(mm): </b>{pes.SelectedIH}</span>:
+        null}
         <br/>
         {pes.ItemMessage ?
         <span><b>OTHER DETAILS: </b>{pes.ItemMessage}</span> : null}

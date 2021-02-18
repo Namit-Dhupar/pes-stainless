@@ -83,6 +83,38 @@ function Banner(props) {
 
 const items = [
     {
+        Name: "ANDERSON-NEGELE",
+        Type: "PRODUCTS",
+        Caption: "View in Products Page.",
+        contentPosition: "right",
+        Items: [
+            {
+                Name: "Flowmeter",
+                Image: "/Images/Anderson.jpg"
+            },
+            {
+                Name: "Temprature Sensor",
+                Image: "/Images/Negel.jpg"
+            }
+        ]
+    },
+    {
+        Name: "PAUL COOPERATION",
+        Type: "PRODUCTS",
+        Caption: "View in Products Page.",
+        contentPosition: "middle",
+        Items: [
+            {
+                Name: "Flowmeter",
+                Image: "/Images/paul1.jpg"
+            },
+            {
+                Name: "Temprature Sensor",
+                Image: "/Images/paul2.jpg"
+            }
+        ]   
+    },
+    {
         Name: "PUMPS",
         Type: "PRODUCTS",
         Caption: "Check out our line of pumps",
@@ -159,38 +191,6 @@ const items = [
             {
                 Name: "Boilers",
                 Image: "/Images/PHE2.gif"
-            }
-        ]
-    },
-    {
-        Name: "SKID MODULE",
-        Type: "PROJECTS",
-        Caption: "View in Projects Page.",
-        contentPosition: "left",
-        Items: [
-            {
-                Name: "Stud",
-                Image: "Images/Capabilities/Cap5.jpg"
-            },
-            {
-                Name: "Homogenizer",
-                Image: "Images/Skid2.jpg"
-            }
-        ]
-    },
-    {
-        Name: "EQUIPMENTS",
-        Type: "PROJECTS",
-        Caption: "View in Projects Page.",
-        contentPosition: "right",
-        Items: [
-            {
-                Name: "Boiler",
-                Image: "Images/Boiler.png"
-            },
-            {
-                Name: "Refrigration",
-                Image: "Images/REFRIGERATION-SYSTEM.jpg"
             }
         ]
     }

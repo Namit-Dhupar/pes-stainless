@@ -1,7 +1,8 @@
 import ProductData from '../../data/ProductData.json';
 import { TOGGLE_FAV, SELECTED_HP, SELECTED_SIZE, SELECTED_MOC, SELECTED_TEXT, 
-         SELECTED_FLOW, SELECT_FITTING, SELECT_UNION,SELECT_PURPOSE, RESET } from '../actions/actions';
-
+        SELECTED_FLOW, SELECT_FITTING, SELECT_UNION,SELECT_PURPOSE, SELECT_MICRON,
+        SELECT_CARTRIDGES, SELECT_OPENEND, SELECT_SHEETTYPE, SELECT_SHEETSIZE, 
+        SELECT_SHEETIH, RESET } from '../actions/actions';
 const copy = JSON.parse(JSON.stringify(ProductData));
 const initialState = {
     products: copy
@@ -162,6 +163,109 @@ const EnquiryReducer = (state = initialState, action) => {
             ...state,
             products: [...state.products]
           }
+
+          case SELECT_MICRON:
+              state.products.map(el => {
+                const prodIndex = el.Subtype.findIndex(p => p.id === action.productId);
+                const updatedProducts = el.Subtype;
+                updatedProducts[prodIndex] = {
+                  ...el.Subtype[prodIndex],
+                  SelectedMicron: action.value
+                }
+                updatedPes = updatedProducts.filter((index) => index !== -1)
+                return updatedPes;
+              });
+      
+              return{
+                ...state,
+                products: [...state.products]
+              }
+
+
+           case SELECT_CARTRIDGES:
+              state.products.map(el => {
+                const prodIndex = el.Subtype.findIndex(p => p.id === action.productId);
+                const updatedProducts = el.Subtype;
+                updatedProducts[prodIndex] = {
+                  ...el.Subtype[prodIndex],
+                  SelectedCartridges: action.value
+                }
+                updatedPes = updatedProducts.filter((index) => index !== -1)
+                return updatedPes;
+              });
+      
+              return{
+                ...state,
+                products: [...state.products]
+              } 
+              
+            case SELECT_OPENEND:
+              state.products.map(el => {
+                const prodIndex = el.Subtype.findIndex(p => p.id === action.productId);
+                const updatedProducts = el.Subtype;
+                updatedProducts[prodIndex] = {
+                  ...el.Subtype[prodIndex],
+                  SelectedOpenEnd: action.value
+                }
+                updatedPes = updatedProducts.filter((index) => index !== -1)
+                return updatedPes;
+              });
+      
+              return{
+                ...state,
+                products: [...state.products]
+              }
+              
+              case SELECT_SHEETTYPE:
+              state.products.map(el => {
+                const prodIndex = el.Subtype.findIndex(p => p.id === action.productId);
+                const updatedProducts = el.Subtype;
+                updatedProducts[prodIndex] = {
+                  ...el.Subtype[prodIndex],
+                  SelectedSheetType: action.value
+                }
+                updatedPes = updatedProducts.filter((index) => index !== -1)
+                return updatedPes;
+              });
+      
+              return{
+                ...state,
+                products: [...state.products]
+              }
+
+              case SELECT_SHEETSIZE:
+                state.products.map(el => {
+                  const prodIndex = el.Subtype.findIndex(p => p.id === action.productId);
+                  const updatedProducts = el.Subtype;
+                  updatedProducts[prodIndex] = {
+                    ...el.Subtype[prodIndex],
+                    SelectedSheetSize: action.value
+                  }
+                  updatedPes = updatedProducts.filter((index) => index !== -1)
+                  return updatedPes;
+                });
+        
+                return{
+                  ...state,
+                  products: [...state.products]
+                }
+
+                case SELECT_SHEETIH:
+                  state.products.map(el => {
+                    const prodIndex = el.Subtype.findIndex(p => p.id === action.productId);
+                    const updatedProducts = el.Subtype;
+                    updatedProducts[prodIndex] = {
+                      ...el.Subtype[prodIndex],
+                      SelectedIH: action.value
+                    }
+                    updatedPes = updatedProducts.filter((index) => index !== -1)
+                    return updatedPes;
+                  });
+          
+                  return{
+                    ...state,
+                    products: [...state.products]
+                  }
          case RESET:
           return{
               ...state,

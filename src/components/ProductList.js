@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectedhp, selectedsize, selectedmoc, selectedtext, 
-selectedflowrate, selectedfitting, selectedunion, selectedpurpose } from '../store/actions/actions';
+selectedflowrate, selectedfitting, selectedunion, selectedpurpose,
+selectedmicron, selectedcartiridges, selectedopenend, selectedsheettype,
+selectedsheetsize, selectedsheetih } from '../store/actions/actions';
 import Showpdffull from './UI/Modal/ModalFull';
 import Showpdfphone from './UI/Modal/ModalMobile';
 import { makeStyles } from '@material-ui/core/styles';
@@ -84,7 +86,8 @@ const tabPanel = productState.map((product,index) => {
         <Hidden smDown>
             {(el.ItemImageB) ? <img src={el.ItemImageB} alt={index}/> : null}
         </Hidden>    
-         </Grid>         
+         </Grid>
+         {/********************************************* FOR PC *******************************************/}
          <Grid item lg={9}>
           <Hidden smDown>
           <Showpdffull title={el.ItemName} 
@@ -104,6 +107,120 @@ const tabPanel = productState.map((product,index) => {
              value={PP}
              control={<Radio color="secondary" />}
              label={PP}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemMicron
+         ?
+         <div>
+         <FormLabel>Micron</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedMicron} 
+         onChange={e => dispatch(selectedmicron(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemMicron.map((IM,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IM}
+             control={<Radio color="secondary" />}
+             label={IM}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemCartridges
+         ?
+         <div>
+         <FormLabel>Cartridge Type</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedCartridges} 
+         onChange={e => dispatch(selectedcartiridges(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemCartridges.map((IC,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IC}
+             control={<Radio color="secondary" />}
+             label={IC}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemOpenEnd
+         ?
+         <div>
+         <FormLabel>Open End Type</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedOpenEnd} 
+         onChange={e => dispatch(selectedopenend(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemOpenEnd.map((IOE,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IOE}
+             control={<Radio color="primary" />}
+             label={IOE}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemSheetType
+         ?
+         <div>
+         <FormLabel>Sheet Type</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedSheetType} 
+         onChange={e => dispatch(selectedsheettype(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemSheetType.map((IST,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IST}
+             control={<Radio color="secondary" />}
+             label={IST}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemSheetSize
+         ?
+         <div>
+         <FormLabel>Sheet Size(mm)</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedSheetSize} 
+         onChange={e => dispatch(selectedsheetsize(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemSheetSize.map((ISS,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={ISS}
+             control={<Radio color="primary" />}
+             label={ISS}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemSheetIH
+         ?
+         <div>
+         <FormLabel>Sheet Inner Hole Die(mm)</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedIH} 
+         onChange={e => dispatch(selectedsheetih(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemSheetIH.map((IHD,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IHD}
+             control={<Radio color="secondary" />}
+             label={IHD}
              labelPlacement="start"
            />
            ))} 
@@ -239,6 +356,7 @@ const tabPanel = productState.map((product,index) => {
       }
          <p>{el.ItemDescription}{' '}</p>   
          </Hidden>
+      {/********************************************* FOR MOBILE *******************************************/}    
          <Hidden mdUp>
          <Showpdfphone 
           pdf={el.ItemFile} isEnq={el.isEnquired} id={el.id}/> 
@@ -257,6 +375,120 @@ const tabPanel = productState.map((product,index) => {
              value={PP}
              control={<Radio color="secondary" />}
              label={PP}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+     {
+        el.ItemMicron
+         ?
+         <div>
+         <FormLabel>Micron</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedMicron} 
+         onChange={e => dispatch(selectedmicron(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemMicron.map((IM,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IM}
+             control={<Radio color="secondary" />}
+             label={IM}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemCartridges
+         ?
+         <div>
+         <FormLabel>Cartridge Type</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedCartridges} 
+         onChange={e => dispatch(selectedcartiridges(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemCartridges.map((IC,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IC}
+             control={<Radio color="secondary" />}
+             label={IC}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemOpenEnd
+         ?
+         <div>
+         <FormLabel>Open End Type</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedOpenEnd} 
+         onChange={e => dispatch(selectedopenend(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemOpenEnd.map((IOE,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IOE}
+             control={<Radio color="primary" />}
+             label={IOE}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemSheetType
+         ?
+         <div>
+         <FormLabel>Sheet Type</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedSheetType} 
+         onChange={e => dispatch(selectedsheettype(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemSheetType.map((IST,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IST}
+             control={<Radio color="secondary" />}
+             label={IST}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemSheetSize
+         ?
+         <div>
+         <FormLabel>Sheet Size(mm)</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedSheetSize} 
+         onChange={e => dispatch(selectedsheetsize(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemSheetSize.map((ISS,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={ISS}
+             control={<Radio color="primary" />}
+             label={ISS}
+             labelPlacement="start"
+           />
+           ))} 
+           </RadioGroup> 
+           </div> : null
+      }
+      {
+        el.ItemSheetIH
+         ?
+         <div>
+         <FormLabel>Sheet Inner Hole Die(mm)</FormLabel>
+         <RadioGroup row aria-label="position3" name="position3" value={el.SelectedIH} 
+         onChange={e => dispatch(selectedsheetih(el.id, e.target.value))} defaultValue="top3">
+         {el.ItemSheetIH.map((IHD,i)=>(      
+           <FormControlLabel
+             key={i}
+             value={IHD}
+             control={<Radio color="secondary" />}
+             label={IHD}
              labelPlacement="start"
            />
            ))} 
